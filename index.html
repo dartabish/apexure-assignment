@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+  </head>
+  <body>
+    <div class="projects-container">
+      <h1>My Projects</h1>
+      <div class="projects">
+        <a
+          href="./1-multi-step-form/form.html"
+          class="project-link"
+          target="_blank"
+        >
+          <div class="project-card">
+            <h2>Multi-step Form</h2>
+          </div>
+        </a>
+        <a
+          href="./2-accordion/accordion.html"
+          class="project-link"
+          target="_blank"
+        >
+          <div class="project-card">
+            <h2>Accordion</h2>
+          </div>
+        </a>
+        <a
+          href="./3-image-gallery/image-gallery.html"
+          class="project-link"
+          target="_blank"
+        >
+          <div class="project-card">
+            <h2>Image Gallery</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .projects-container {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 900px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .project-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card {
+    flex-grow: 1;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .project-card h2 {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+  }
+
+  .project-card p {
+    color: #b0b0b0;
+    font-size: 1rem;
+  }
+
+  .project-link:hover .project-card {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-link:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-link:active .project-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+
+  @media (max-width: 768px) {
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-link {
+      width: 90%;
+    }
+  }
+</style>

@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.accordion-container {
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background-color: #f9f9f9;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.accordion-header:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+i.fa-solid.fa-trash {
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+i.fa-solid.fa-trash:hover {
+  color: #e74c3c;
+}
+
+i.fa-solid.fa-trash:active {
+  transform: scale(0.95);
+}
+
+.accordion-icon {
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px;
+  background-color: #f7f7f7;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: #555;
+}
+
+.accordion-item.active .accordion-header {
+  background-color: #e0e0e0;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-content {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.add-content-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  user-select: none;
+}
+
+.add-content-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.add-content-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+}
+
+.add-content-btn:active {
+  background-color: #388e3c;
+}
